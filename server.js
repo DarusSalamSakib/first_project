@@ -14,10 +14,17 @@ const init = async () => {
         method: `GET`,
         path: `/`,
         handler: (request, h) => {
-            return "<h1>Hello World!</h1><br><h2>Ki obosthaa borobhai</h2>";
+            return '<h1 style="color:blue">Hello World</h1>';
         }
     });
 
+    server.route({
+        method: `GET`,
+        path: `/sakib`,
+        handler: (request, h) => {
+            return '<h1 style="color:blue">Hello baby</h1>';
+        }
+    });
     await server.start();
     console.log(`Server started on: ${server.info.uri}`);
 };
